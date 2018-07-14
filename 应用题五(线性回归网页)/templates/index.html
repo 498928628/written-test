@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>线性回归</title>
+    <link rel="stylesheet" href="../static/register/css/base.css">
+    <link rel="stylesheet" type="text/css" href="../static/register/login/css/component.css">
+    <style>
+    body.register .large-header {
+    background-image:url(../static/register/login/img/xik.jpg);
+    }
+    body.register .large-header .logo_box{
+	border-radius:10px;
+	margin-top: -300px;
+    }
+    body.register .large-header{
+	height: 100%;
+    }
+    body.register .large-header .logo_box h5{
+	color: #333;
+	font-weight: 700;
+	font-size: 1.5em;
+	text-align: center;
+    }
+    body.register .large-header .logo_box h1{
+    text-align: center;
+    background-position: -120px -15px;
+    height: 40px;
+    color: #333;
+    }
+    body.register .large-header .logo_box .register1{
+	text-align: right;
+	font-size: 14px;
+	color: #81b9d7;
+    }
+    body.register .large-header .logo_box .register1 a{
+	color: #0eacff;
+	padding-left: 6px;
+	padding-right: 6px;
+    }
+    body.register .large-header .logo_box .input_outer {
+    margin-bottom: 35px;
+}
+
+    </style>
+</head>
+<body class="register">
+<div id="large-header" class="large-header">
+    <div class="logo_box">
+        <h1>价格序列线性回归</h1>
+        <button type='button'><a role="button" href="/"><font color='black'>自动生成两组100位随机序列</font></a></button>
+
+
+        <br>
+        <br>
+        <form class="form-horizontal" method="post" action="{{ url_for('.load') }}">
+            <span><font color="black">序列一:</font></span>
+            <br>
+            <br>
+            <div class="input_outer">
+                <span class="icon u_user"></span>
+                <input name="list1" class="text" type="text" value="{{series1}}">
+            </div>
+            <span><font color="black">序列二:</font></span>
+            <br>
+            <br>
+            <div class="input_outer">
+                <span class="icon u_user"></span>
+                <input name="list2" class="text" type="text" value="{{series2}}">
+            </div>
+            <div class="mb2">
+                <input type="submit" class="act-but submit" value="提交序列" id="btn_register">
+            </div>
+        </form>
+        </form>
+    </div>
+</div>
+</body>
+</html>
